@@ -1,0 +1,9 @@
+.fullPageContainer {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #47ab6c;
+  position: absolute;
+  top: 0;
+  color: white;
+}
