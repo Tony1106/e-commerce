@@ -3,7 +3,7 @@
 
 
 # Technology Stack
-![alt text](https://github.com/Tony1106/e-commerce/blob/master/Order%20App%20Architecture.png)
+![alt text](https://github.com/Tony1106/e-commerce/blob/master/Diagrams/Order%20App%20Architecture.png)
 
 
 
