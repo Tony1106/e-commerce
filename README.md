@@ -1,3 +1,12 @@
+# Overview
+
+
+
+# Technology Stack
+![alt text](https://github.com/Tony1106/e-commerce/blob/master/Order%20App%20Architecture.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
