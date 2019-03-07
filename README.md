@@ -1,3 +1,12 @@
+# Overview
+This project aims to computerize the Order process for a silk store. It is not only specifically designed to facilitate the order experience of the customers who have been using text messaging and phone call to order many products but also it will help the store owner line up the orders, visualize and organize in the format that's easy to process. In addition, the app also helps the customers view and summarize their past orders as well as helping the store owners to generate the invoice for each other and the order summary at the end of the day.
+
+
+# Technology Stack
+![alt text](https://github.com/Tony1106/e-commerce/blob/master/Diagrams/Order%20App%20Architecture.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

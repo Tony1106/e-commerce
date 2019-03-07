@@ -15,8 +15,14 @@
   height: 100%;
   width: 40%;
   max-width: 50%;
+<<<<<<< HEAD
   background-image: url("../../../asset/logo.png");
   background-position: left;
   background-size: contain;
+=======
+  /*background-image: url("../../../asset/logo.png");*/
+  background-position: -12px -3px;
+  background-size: 45%;
+>>>>>>> cda588fd98d02c0e769822fdd290f569415ebc87
   background-repeat: no-repeat;
 }
