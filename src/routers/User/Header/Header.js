@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 export default class Header extends Component {
   render() {
@@ -8,7 +9,10 @@ export default class Header extends Component {
         <div className={styles.logo} />
         <div className={styles.listIcon}>
           <Icon name="search" size="large" />
-          <Icon name="cart" size="large" />
+          <Link to="/cart">
+            {" "}
+            <Icon name="cart" size="large" />
+          </Link>
         </div>
       </div>
     );

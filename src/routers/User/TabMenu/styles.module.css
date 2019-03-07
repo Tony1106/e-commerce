@@ -18,6 +18,10 @@
   align-items: center;
   text-align: center;
   width: 25%;
+  color: white;
+}
+.item:hover {
+  color: #f2b134;
 }
 .active {
   color: #f2b134;
