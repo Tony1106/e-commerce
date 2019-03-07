@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect} from "react-router-dom";
 import Header from "./Header/Header";
 import TabMenu from "./TabMenu/TabMenu";
 import styles from "./styles.module.css";
@@ -11,6 +11,7 @@ import CheckOut from "../../screens/users/CheckOut/CheckOut";
 import Home from "../../screens/users/Home/Home";
 import ItemDetail from "../../screens/users/ItemDetail/ItemDetail";
 import Profile from "../../screens/users/Profile/Profile";
+
 
 export default function Admin(props) {
   console.log(props);
@@ -28,6 +29,7 @@ export default function Admin(props) {
           <Route path="/check-out" component={CheckOut} />
           <Route path="/home" component={Home} />
           <Route path="/item-detail" component={ItemDetail} />
+          <Redirect from="/" to="/home"/>
         </Switch>
       </div>
 
