@@ -7,26 +7,29 @@ export default class TabMenu extends Component {
     return (
       <ul className={styles.container}>
           <li className={styles.item}>
-            <NavLink to="/home" activeStyle={{color: '#f2b134'}}>
+            <NavLink to="/home" activeStyle={{color: '#ffd600'}}>
               <Icon name="home" size="large" />
               <div className={styles.text}>Home</div>
             </NavLink>
           </li>
           <li className={styles.item}>
-              <NavLink to="/category" activeStyle={{color: '#f2b134'}}>
+              <NavLink to={{
+                  pathname: "/category",
+                  search: "query=all"
+              }} activeStyle={{color: '#ffd600'}}>
                   <Icon name="list ul" size="large" />
                   <div className={styles.text}>Category</div>
               </NavLink>
           </li>
 
           <li className={styles.item}>
-            <NavLink to="/profile" activeStyle={{color: '#f2b134'}}>
+            <NavLink to="/profile" activeStyle={{color: '#ffd600'}}>
               <Icon name="user" size="large" />
               <div className={styles.text}>Profile</div>
             </NavLink>
           </li>
           <li className={styles.item}>
-            <NavLink to="/more" activeStyle={{color: '#f2b134'}}>
+            <NavLink to="/more" activeStyle={{color: '#ffd600'}}>
               <Icon name="sign-out" size="large" />
               <div className={styles.text}>More</div>
             </NavLink>

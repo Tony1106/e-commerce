@@ -27,7 +27,8 @@ export default function Admin(props) {
           <Route path="/check-out" component={CheckOut} />
           <Route path="/home" component={Home} />
           <Route path="/item-detail" component={ItemDetail} />
-          <Redirect from="/" to="/home" />
+          <Redirect exact from="/" to="/home" />
+          <Route render={()=> <h1>Sorry, this page is not found. Please check the URL again</h1>}/>
         </Switch>
       </div>
 
