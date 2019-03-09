@@ -7,7 +7,7 @@ export default class Category extends Component {
         listItem: ["Áo dài", "Quần áo dài", "Áo Sơ Mi"],
         icon: "female",
         title: "Women",
-        color: "blue"
+        color: "green"
       },
       {
         listItem: ["Áo thun", "Áo khoác", "Quần Jean"],
