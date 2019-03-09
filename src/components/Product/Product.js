@@ -16,7 +16,7 @@ const product = (props) => {
             <Card.Content extra>
             <Grid.Column floated='right' width={6}>
                 <Button inverted color='green' onClick={props.clicked}>
-                    Add To cart
+                    Select
                 </Button>
             </Grid.Column>
             </Card.Content>

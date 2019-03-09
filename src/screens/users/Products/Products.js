@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Product from '../../../components/Product/Product.js'
+import Product from '../../../components/Product/Product.js';
+import {Input} from "semantic-ui-react";
 
 class Products extends Component{
     state={
@@ -29,7 +30,8 @@ class Products extends Component{
                 quantity: 0
             }
         ],
-        queriedCategory: null
+        queriedCategory: null,
+        searchValue: null
     };
 
     componentDidMount() {
@@ -41,12 +43,24 @@ class Products extends Component{
 
         }
     }
+    searchColorHandler = (e) => {
+        this.setState({searchValue: e.target.value});
+    };
     render(){
         let products = null;
         if (this.state.queriedCategory){
             products = (
+                //First filter is category based
                 this.state.products.filter((prod) => {
                     return prod.category.replace(/ /g, '') === this.state.queriedCategory
+                //Second filter is search input based
+                }).filter(p => {
+                    if (this.state.searchValue){
+                        return p.color.toLowerCase().indexOf(this.state.searchValue.toLowerCase()) !== -1
+                    }else {
+                        return true
+                    }
+
                 }).map( product => {
                 return <Product key={product.name}
                                 name={product.name}
@@ -55,10 +69,11 @@ class Products extends Component{
                                 imageURL={product.imageURL}
                                 size={product.imageURL}
                                 quantity={product.quantity}/>
-            }))
+            }));
         }
         return (
             <div>
+                <Input fluid placeholder='Color' onChange={this.searchColorHandler}/>
                 {products ? products : null}
             </div>
         )
