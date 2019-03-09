@@ -13,10 +13,7 @@ export default class TabMenu extends Component {
             </NavLink>
           </li>
           <li className={styles.item}>
-              <NavLink to={{
-                  pathname: "/category",
-                  search: "query=all"
-              }} activeStyle={{color: '#ffd600'}}>
+              <NavLink to='/category' activeStyle={{color: '#ffd600'}}>
                   <Icon name="list ul" size="large" />
                   <div className={styles.text}>Category</div>
               </NavLink>

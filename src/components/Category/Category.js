@@ -1,29 +1,36 @@
-import React from 'react';
-import { Card, Icon, Image, Button, Grid} from 'semantic-ui-react'
+import React, {Component} from 'react';
+import { Card, Grid, Image, Button } from 'semantic-ui-react'
+import {withRouter} from "react-router-dom";
 import classes from './Category.module.css'
 
-const category = (props)=>{
-    return (
-        <Card className={classes.Category}>
-            <Image src={props.imageURL} />
-            <Card.Content>
-                <Card.Header>{props.title}</Card.Header>
-                {/*<Card.Meta>*/}
-                    {/*<span className='date'>Joined in 2015</span>*/}
-                {/*</Card.Meta>*/}
-                <Card.Description>{props.description}</Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-                <Grid >
-                    <Grid.Column floated='right' width={6}>
-                        <Button inverted color='green' onClick={props.clicked}>
-                            View
-                        </Button>
+class Category extends Component {
+    // console.log(props);
+
+    viewProductsHandler = () => {
+        this.props.history.push('/products?category=' + this.props.name.replace(/ /g, ''))
+    };
+
+    render (){
+        return (
+            <Grid className={classes.Category}>
+                <Grid.Row>
+                    <Grid.Column width={6}>
+                        <Image src={this.props.imageURL} />
                     </Grid.Column>
-                </Grid>
-            </Card.Content>
-        </Card>
-    )
+                    <Grid.Column width={10}>
+                        <h2>{this.props.name}</h2>
+                        <p>{this.props.description}</p>
+                    </Grid.Column>
+
+                    <Button fluid inverted color='green'
+                    onClick={this.viewProductsHandler}>
+                        View
+                    </Button>
+                </Grid.Row>
+            </Grid>
+        )
+    }
+
 };
 
-export default category;
+export default withRouter(Category);

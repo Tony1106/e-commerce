@@ -1,3 +1,10 @@
-.Category{
+.Category {
     margin: 12px auto !important;
+    box-shadow: 0px 5px 10px 0.2px grey;
+    padding: 10px !important;
+    max-height: 40%;
+}
+
+.Category button{
+    margin-top: 10px !important;
 }
