@@ -6,7 +6,9 @@ export default class Header extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.logo} />
+          <div className={styles.logo}>
+              <h2>Thuy Hoang</h2>
+          </div>
         <div className={styles.listIcon}>
           <Icon name="search" size="large" />
           <Link to="/cart">

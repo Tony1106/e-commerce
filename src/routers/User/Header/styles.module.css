@@ -1,7 +1,7 @@
 .container {
-  height: 50px;
+  height: 60px;
   width: 100%;
-  background-color: #0894a1;
+  background-color: black;
   border-bottom: 1px solid #666;
   color: white;
   display: flex;
@@ -10,15 +10,22 @@
   padding: 0 20px;
   position: fixed;
   top: 0;
+  z-index: 400;
 }
 .logo {
   height: 100%;
-  width: 40%;
-  max-width: 50%;
-  background-image: url("../../../asset/logo.png");
-  background-position: left;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 60%;
+  /*background-image: url("../../../asset/logo.png");*/
+  /*background-position: left;*/
+  color: #ffd600;
   background-size: contain;
   background-repeat: no-repeat;
+}
+.logo h1{
+  font-family: cursive;
 }
 .listIcon a {
   color: white;
