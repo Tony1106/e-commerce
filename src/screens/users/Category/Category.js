@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { ListItem } from "../../../components/ListItem/index";
-export default class Category extends Component {
+import { connect } from "react-redux";
+import * as A from "../../../redux/product/action";
+class Category extends Component {
   state = {
     category: [
       {
@@ -26,7 +28,19 @@ export default class Category extends Component {
   render() {
     const { category } = this.state;
     let listItem = category.map((item, i) => <ListItem key={i} item={item} />);
-
+    this.props.addProduct("hello");
     return <div style={{ marginTop: "10px" }}>{listItem}</div>;
   }
 }
+
+const mapStateToProps = state => ({
+  products: state.product
+});
+export default connect(
+  mapStateToProps,
+  dispatch => {
+    return {
+      addProduct: product => dispatch(A.fetchProduct.request(product))
+    };
+  }
+)(Category);
