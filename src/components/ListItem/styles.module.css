@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ListItem {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 60% 20%;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  justify-content: left;
+  font-size: 20px;
+}
+.showDetail {
+  height: 30px;
+  width: 30px;
+  transition: 0.3s;
+}
+.icon {
+  font-size: 60px;
+}
+.childItemContainer {
+  width: 80%;
+  align-self: flex-end;
+  transition: 0.3s;
+}
+.childItem {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #dddddd;
+}
