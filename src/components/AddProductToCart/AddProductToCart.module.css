@@ -1,0 +1,18 @@
+.AddProductToCart {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 80%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 10%;
+    top: 5%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    border-radius: 12px;
+}
+
+.AddProductToCart form button{
+    margin-top: 20px !important;
+}

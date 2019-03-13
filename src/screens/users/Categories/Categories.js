@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Category from '../../../components/Category/Category';
-import Product from '../../../components/Product/Product';
+// import Product from '../../../components/Product/Product';
 
 export default class Categories extends Component {
 
@@ -24,7 +24,8 @@ export default class Categories extends Component {
   render() {
     let categories = (
         this.state.categories.map((category)=> {
-          return <Category key={category.name} name={category.name} imageURL={category.imageURL} description={category.description}/>
+          return <Category key={category.name}
+                           name={category.name} imageURL={category.imageURL} description={category.description}/>
         })
     );
 
