@@ -24,7 +24,7 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.logo h1{
+.logo h1 {
   font-family: cursive;
 }
 .listIcon a {
@@ -32,4 +32,23 @@
 }
 .listIcon a:hover {
   color: white;
+}
+.cart {
+  position: relative;
+}
+.cartLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -50%;
+  right: -25%;
+  z-index: 99;
+  border-radius: 50%;
+  font-size: 12px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
 }

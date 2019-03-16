@@ -1,0 +1,50 @@
+.itemContainer {
+  margin-bottom: 30px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-column-gap: 10px;
+  border: 1px solid #dddddd;
+  padding: 10px 10px;
+}
+.left {
+  height: 50px;
+  width: 100%;
+  background-image: url("https://cdn.shopify.com/s/files/1/2592/4736/products/xanhden_1024x1024.jpg?v=1538555554");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.options {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.options > *:nth-child(1) {
+  margin-right: 10px;
+}
+.titles {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.price {
+  color: red;
+  font-weight: 800;
+}
+.removeItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dddddd;
+  border-top: none;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+}
+.button {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+}
