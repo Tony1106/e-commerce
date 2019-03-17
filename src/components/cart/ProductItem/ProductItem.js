@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 export default function ProductItem(props) {
-  const { color, imageURL, name, quantity, size } = props.cartData;
+  const { color, imageURL, name, quantity, size, id } = props.cartData;
   console.log(props, "props");
 
   return (
@@ -20,7 +20,9 @@ export default function ProductItem(props) {
       </div>
       <div className={styles.removeItem}>
         {" "}
-        <button className={styles.button}>Remove item</button>{" "}
+        <button className={styles.button} onClick={() => props.deleteItem(id)}>
+          Remove item
+        </button>{" "}
       </div>
     </div>
   );
