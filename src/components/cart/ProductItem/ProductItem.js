@@ -13,7 +13,7 @@ export default function ProductItem(props) {
           <div className={styles.options}>
             <div className={styles.size}>Size: {size}</div>
             <div className={styles.color}>Color: {color}</div>
-            <div className={styles.quantity}>Color: {quantity}</div>
+            <div className={styles.quantity}>Quantity: {quantity}</div>
           </div>
           <div className={styles.price}>demo$</div>
         </div>

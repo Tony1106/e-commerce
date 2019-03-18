@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./styles.module.css";
 import { connect } from "react-redux";
 import * as A from "../../../redux/cart/action";
 import ProductItem from "../../../components/cart/ProductItem/ProductItem";
@@ -21,6 +22,9 @@ class Cart extends Component {
             deleteItem={id => this.handleDeleteItem(id)}
           />
         ))}
+        <div className={styles.buttonContainer}>
+          <button className={styles.button}>Check out</button>
+        </div>
       </div>
     );
   }
