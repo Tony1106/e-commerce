@@ -8,25 +8,29 @@ const deleteItemProduct = (id, addedProducts) => {
   return newListProduct;
 };
 const addToCart = (product, addedProducts) => {
-  const currentList = addedProducts;
-  let newAddedProducts = [];
+  let currentList = [];
   let newId = `${product.id}_${product.color}_${product.size}`;
   product.id = newId;
-  if (currentList.length == 0) {
-    return [product];
+  if (addedProducts.length == 0) {
+    currentList.push(product);
   } else {
-    console.log("trung hop");
-    currentList.forEach(cartItem => {
-      if (product.id == cartItem.id) {
-        console.log("trung hop");
+    currentList = addedProducts;
 
-        product.quantity += cartItem.quantity;
-        newAddedProducts.push(product);
-      } else {
-        newAddedProducts.push(product);
-      }
-    });
-    return newAddedProducts;
+    if (checkExistID(product.id, addedProducts)) {
+      currentList.forEach(item => {
+        if (item.id === product.id) {
+          item.quantity += product.quantity;
+        }
+      });
+    } else {
+      currentList.push(product);
+    }
   }
+  return currentList;
 };
-module.exports = { deleteItemProduct, addToCart };
+const checkExistID = (id, arr) => {
+  let result = false;
+  arr.forEach(item => (item.id === id ? (result = true) : null));
+  return result;
+};
+module.exports = { deleteItemProduct, addToCart, checkExistID };
