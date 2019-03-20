@@ -7,7 +7,7 @@ export default function ProductItem(props) {
   return (
     <div className={styles.itemContainer}>
       <div className={styles.container}>
-        <div className={styles.left} />
+        <div className={styles.left} style={{backgroundImage: `url("${imageURL}")`}}/>
         <div className={styles.right}>
           <div className={styles.titles}>{name}</div>
           <div className={styles.options}>
