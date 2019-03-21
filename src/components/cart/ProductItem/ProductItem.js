@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.css";
 export default function ProductItem(props) {
   const { color, imageURL, name, quantity, size, id } = props.cartData;
-  console.log(props, "props");
 
   return (
     <div className={styles.itemContainer}>

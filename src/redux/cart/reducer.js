@@ -15,8 +15,6 @@ const initialState = {
 // }
 
 const cart = (state = initialState, action) => {
-  console.log(action);
-
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
       const productAddedToCart = fn.addToCart(

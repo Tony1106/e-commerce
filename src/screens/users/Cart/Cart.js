@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as A from "../../../redux/cart/action";
 import ProductItem from "../../../components/cart/ProductItem/ProductItem";
 class Cart extends Component {
   handleDeleteItem = id => {
-    console.log(id);
     this.props.deleteCartProduct(id);
   };
+
   render() {
     console.log(this.props.cart);
     const cart = this.props.cart.addedProducts;
@@ -22,9 +23,9 @@ class Cart extends Component {
             deleteItem={id => this.handleDeleteItem(id)}
           />
         ))}
-        <div className={styles.buttonContainer}>
+        <Link className={styles.buttonContainer} to="./check-out">
           <button className={styles.button}>Check out</button>
-        </div>
+        </Link>
       </div>
     );
   }
