@@ -9,9 +9,9 @@
   padding: 10px 10px;
 }
 .left {
-  height: 50px;
+  height: 100%;
   width: 100%;
-  background-image: url("https://cdn.shopify.com/s/files/1/2592/4736/products/xanhden_1024x1024.jpg?v=1538555554");
+  /*background-image: url("https://cdn.shopify.com/s/files/1/2592/4736/products/xanhden_1024x1024.jpg?v=1538555554");*/
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -54,4 +54,6 @@
   height: 100%;
   width: 100%;
   cursor: pointer;
+  border: none;
+  background: none;
 }

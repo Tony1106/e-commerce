@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { Button } from "semantic-ui-react";
 import { Formik } from "formik";
 export default function InputCheckOut() {
   return (
@@ -26,7 +27,7 @@ export default function InputCheckOut() {
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
+          setSubmitting(true);
         }, 400);
       }}
     >
@@ -41,37 +42,57 @@ export default function InputCheckOut() {
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit} className={styles.formContainer}>
+          <div className={styles.label}>Your name:</div>
           <input
             type="text"
+            placeholder="Enter your name"
             name="name"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.name}
             className={styles.formItem}
           />
-          <div className={styles.error}>{errors.name && touched.name && errors.name} </div>
-          
+          <div className={styles.error}>
+            {errors.name && touched.name && errors.name}{" "}
+          </div>
+          <div className={styles.label}>Your address:</div>
           <input
             type="text"
             name="address"
+            placeholder="Enter your address"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address}
             className={styles.formItem}
           />
-          <div className={styles.error}> </div>{errors.address && touched.address && errors.address}
+          <div className={styles.error}>
+            {" "}
+            {errors.address && touched.address && errors.address}
+          </div>
+          <div className={styles.label}>Your phone number:</div>
           <input
             type="text"
             name="phoneNumber"
+            placeholder="Enter your phone number"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.phoneNumber}
             className={styles.formItem}
           />
-          {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
+          <div className={styles.error}>
+            {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
+          </div>
+          <div className={styles.button}>
+            {" "}
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              color="teal"
+              fluid="true"
+            >
+              Finish Checkout
+            </Button>
+          </div>
         </form>
       )}
     </Formik>
