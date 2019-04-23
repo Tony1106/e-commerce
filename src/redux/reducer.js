@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
+import auth from "./auth/reducer";
 import cart from "./cart/reducer";
 import product from "./product/reducer";
-import stock from "./stock/reducer"
+import stock from "./stock/reducer";
 
 export default combineReducers({
-  cart: cart,
-  stock: stock,
-  product: product
+  auth,
+  cart,
+  stock,
+  product
 });
