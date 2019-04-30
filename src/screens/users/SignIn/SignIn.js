@@ -34,7 +34,7 @@ class SignIn extends Component {
           const token = res.data;
           localStorage.setItem("token", token);
           this.props.login();
-          this.props.history.push("/");
+          this.props.history.push("/profile");
         }
       })
       .catch(err => {

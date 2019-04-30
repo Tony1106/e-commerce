@@ -1,5 +1,5 @@
-import { takeEvery, all, put, call } from "redux-saga/effects";
-import { VERIFY_TOKEN, SIGN_IN } from "./action";
+import { takeEvery, put } from "redux-saga/effects";
+import { VERIFY_TOKEN } from "./action";
 import axios from "axios";
 
 function* verifyToken(action) {
@@ -7,7 +7,7 @@ function* verifyToken(action) {
     const token = action.token;
     const res = yield axios.post("/api/user/token", { token });
     if (res) {
-      yield put({ type: VERIFY_TOKEN.success.getType() });
+      yield put({ type: VERIFY_TOKEN.success.getType(), payload: res.data });
     }
   } catch (err) {
     const errMsg = err.response.data.message;

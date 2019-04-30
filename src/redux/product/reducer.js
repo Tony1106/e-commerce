@@ -1,28 +1,20 @@
-import * as A from "./action";
-console.log(A.fetchProduct);
+import {fetchProduct} from "./action";
 
 const initialState = {
-  item1: {
-    id: "hasdasdwq2132dad",
-    title: "t shirt",
-    quantity: 20
-  },
-  item2: {
-    id: "hasdasdwq2132dad",
-    title: "jean",
-    quantity: 20
-  }
+  page: 1,
+  data:[]
 };
 
 const product = (state = initialState, action) => {
+  const {products} = action;
+  console.log(action, 'product');
+  
   switch (action.type) {
-    case A:
-      state = { ...action.data };
-      break;
-
+    case fetchProduct.success.getType():
+      return state = { ...state,
+      data: action.data };
     default:
       return state;
-      break;
   }
 };
 export default product;

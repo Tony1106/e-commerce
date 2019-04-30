@@ -11,8 +11,6 @@ class TabMenu extends PureComponent {
   };
   render() {
     const { isLogin } = this.props;
-    console.log(isLogin, "is login");
-
     let checkLoginJSX;
     if (!isLogin) {
       checkLoginJSX = (

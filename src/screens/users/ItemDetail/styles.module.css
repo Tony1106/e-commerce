@@ -1,0 +1,21 @@
+.imageDetail {
+  margin-bottom: 60px;
+}
+.title {
+  font-size: 14px;
+  font-weight: 700;
+}
+.price {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f57224;
+}
+.addToCart {
+  width: 100%;
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  background: red;
+  color: white;
+  height: 40px;
+}

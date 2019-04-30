@@ -1,36 +1,32 @@
-import React, {Component} from 'react';
-import { Card, Grid, Image, Button } from 'semantic-ui-react'
-import {withRouter} from "react-router-dom";
-import classes from './Category.module.css'
+import React, { Component } from "react";
+import { Image } from "semantic-ui-react";
+import {Link} from 'react-router-dom'
+import { withRouter } from "react-router-dom";
+import styles from "./Category.module.css";
 
 class Category extends Component {
-    // console.log(props);
+  // console.log(props);
 
-    viewProductsHandler = () => {
-        this.props.history.push('/products?category=' + this.props.name.replace(/ /g, ''))
-    };
+  viewProductsHandler = () => {
+    this.props.history.push(
+      "/products?category=" + this.props.name.replace(/ /g, "")
+    );
+  };
+  handleClick = () => {
 
-    render (){
-        return (
-            <Grid className={classes.Category}>
-                <Grid.Row>
-                    <Grid.Column width={6}>
-                        <Image src={this.props.imageURL} />
-                    </Grid.Column>
-                    <Grid.Column width={10}>
-                        <h2>{this.props.name}</h2>
-                        <p>{this.props.description}</p>
-                    </Grid.Column>
+  }
 
-                    <Button fluid inverted color='green'
-                    onClick={this.viewProductsHandler}>
-                        View
-                    </Button>
-                </Grid.Row>
-            </Grid>
-        )
-    }
 
-};
+  render() {
+    const { image, description, name, price, _id } = this.props;
+    return (
+      <Link className={styles.child} to={"/item-detail/"+_id} params={{productID:_id}}>
+        <Image src={(image&&image[0].src) || 'https://www.groupize.com/wp-content/uploads/2018/06/image-demo-b-2-400x320.png'} size="small" />
+        <div className={styles.name}>{name}</div>
+        <div className={styles.price}>{price}</div>
+      </Link>
+    );
+  }
+}
 
 export default withRouter(Category);

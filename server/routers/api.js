@@ -15,9 +15,10 @@ router.post("/user/token", require("../middleware/auth").grantAccessByToken);
 
 //product
 router.post("/product", require("../api/Product/Handler").create);
-router.get("/product", require("../api/Product/Handler").getAll);
+router.get("/product/:id", require("../api/Product/Handler").getProductDetail);
 router.delete("/product/:id", require("../api/Product/Handler").destroy);
 router.put("/product/:id", require("../api/Product/Handler").update);
-
+//Paginate product
+router.post("/product/:page", require("../api/Product/Handler").get);
 //
 module.exports = router;
